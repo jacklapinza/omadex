@@ -6,14 +6,22 @@ Omarchy Quattro.
 It uses [PokeAPI](https://pokeapi.co/) for Pokemon names, artwork, types,
 abilities, and base stats. It does not require an API key.
 
+![Omadex search showing Mew artwork and base stats](assets/search.png)
+
 ## Features
 
 - Fast local-name search with keyboard navigation
 - Artwork, typing, abilities, measurements, and base stats
 - Two-Pokemon comparison with mirrored stat bars and transparent differences
 - Theme-aware centered window
-- Poké Ball bar launcher with interactive placement during installation
 - Mouse and keyboard operation
+
+## Compare Pokemon
+
+Select two Pokemon to see their base-stat totals, category wins, largest stat
+advantage, and a mirrored breakdown on the official 0-255 base-stat scale.
+
+![Omadex comparing Snorlax and Charizard](assets/compare.png)
 
 ## Install
 
