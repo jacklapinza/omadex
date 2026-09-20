@@ -57,6 +57,14 @@ omarchy plugin remove io.github.jacklapinza.omadex
 - Comparison results use PokéAPI base stats and do not claim to be competitive
   rankings or an official power score.
 
+## Dependencies and network access
+
+Omadex requires Omarchy Quattro and its standard Quickshell environment. The
+centered window setup uses Omarchy's existing `hyprctl` and `jq` commands; it
+does not install packages, require elevated privileges, or modify user
+configuration. Pokémon names and details are fetched from PokéAPI over HTTPS,
+without an API key. Artwork URLs are supplied by PokéAPI and loaded remotely.
+
 ## Attribution
 
 Pokémon names and character names are trademarks of Nintendo. Omadex is not
