@@ -12,6 +12,7 @@ abilities, and base stats. It does not require an API key.
 - Artwork, typing, abilities, measurements, and base stats
 - Two-Pokemon comparison with mirrored stat bars and transparent differences
 - Theme-aware centered window
+- Poké Ball bar launcher with interactive placement during installation
 - Mouse and keyboard operation
 
 ## Install
@@ -27,6 +28,12 @@ omarchy-shell shell summon io.github.jacklapinza.omadex '{}'
 ```
 
 Press Escape to close it.
+
+Click the Poké Ball icon in the bar to open or close Omadex. Move it later with:
+
+```bash
+omarchy bar move io.github.jacklapinza.omadex --section left
+```
 
 ## Remove
 
