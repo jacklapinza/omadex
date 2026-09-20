@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.jacklapinza.omadex",
+  "name": "Omadex",
+  "version": "0.1.0",
+  "author": "jacklapinza",
+  "license": "MIT",
+  "description": "Search and compare Pokemon from a centered Omarchy panel.",
+  "homepage": "https://github.com/jacklapinza/omadex",
+  "repository": "https://github.com/jacklapinza/omadex",
+  "kinds": ["panel"],
+  "entryPoints": { "panel": "Panel.qml" }
+}
