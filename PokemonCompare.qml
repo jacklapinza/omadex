@@ -54,7 +54,7 @@ Item {
     }
 
     root.statusText = "Loading " + name + "..."
-    PokeApi.loadPokemon(name, function(data) {
+    apiClient.request(PokeApi.pokemonPath(name), function(data) {
       root.compareCache[name] = data
       setPokemon(side, data)
     }, function(message) {
@@ -68,6 +68,10 @@ Item {
     root.statusText = root.leftPokemon && root.rightPokemon
       ? "Higher base stat wins each row"
       : "Enter two Pokemon to compare their base stats."
+  }
+
+  ApiClient {
+    id: apiClient
   }
 
   Column {

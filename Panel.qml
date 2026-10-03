@@ -45,9 +45,13 @@ Panel {
   }
 
   function loadIndex() {
-    PokeApi.loadIndex(function(data) {
-      root.pokemonIndex = data
-      root.statusText = data.length + " Pokemon available"
+    apiClient.request(PokeApi.indexPath(), function(data) {
+      if (!data.results) {
+        root.statusText = "The API returned invalid data."
+        return
+      }
+      root.pokemonIndex = data.results
+      root.statusText = data.results.length + " Pokemon available"
       updateResults()
     }, function(message) {
       root.statusText = message
@@ -91,7 +95,7 @@ Panel {
       return
     }
 
-    PokeApi.loadPokemon(name, function(data) {
+    apiClient.request(PokeApi.pokemonPath(name), function(data) {
       root.detailCache = PokemonStore.cache(root.detailCache, name, data)
       root.selectedPokemon = data
       root.statusText = ""
@@ -108,6 +112,10 @@ Panel {
   Component.onCompleted: {
     loadIndex()
     registerWindowSetup()
+  }
+
+  ApiClient {
+    id: apiClient
   }
 
   Process {
